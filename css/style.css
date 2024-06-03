@@ -1,0 +1,423 @@
+@charset "utf-8";
+
+/*** Fonts Face CSS ***/
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+
+/**** CSS Variables ****/
+
+/** use variables in css property like, background-color: var(--primary-color); */
+:root {
+    /* --- color variables --- */
+    --primary-color: #f9f9f9;
+    --secondary-color: #fff;
+    --border-color: #e8dede;
+    --text-primary-color: #1B1B1B;
+    --text-secondary-color: #888888
+;
+    --text-selection-color: #b3d4fc;
+}
+
+/* -=- Common Element CSS Start -=- */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-moz-selection {
+    background: var(--text-selection-color);
+    text-shadow: none;
+}
+
+::selection {
+    background: var(--text-selection-color);
+    text-shadow: none;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--primary-color);
+}
+
+.cursor {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none; /* Asegura que el cursor no interfiera con otros elementos */
+    mix-blend-mode: difference; /* Ajusta esto para lograr el efecto deseado */
+}
+
+img {
+    border: 0px !important;
+    outline: none;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+ul,
+ol {
+    /* margin: 0px; */
+    /* padding: 0px; */
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    outline: none;
+    text-decoration: none;
+}
+
+.btn:focus,
+.btn.focus,
+.form-control:hover,
+.form-control:focus,
+.form-control:focus:Active {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+p {
+    margin: 0px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--text-primary-color);
+    font-weight: normal;
+    padding-bottom: 16px;
+}
+
+hr {
+    margin: 1em 0;
+    padding: 0;
+    display: block;
+    border: 0;
+    border-top: 1px solid var(--border-color);
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--text-secondary-color);
+    opacity: 1;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--text-secondary-color);
+}
+
+input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--text-secondary-color);
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+textarea::placeholder {
+    color: var(--text-secondary-color);
+    opacity: 1;
+}
+
+textarea:-ms-input-placeholder {
+    color: var(--text-secondary-color);
+}
+
+textarea::-ms-input-placeholder {
+    color: var(--text-secondary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+p,
+a {
+    font-family: 'Figtree', sans-serif;
+}
+
+/*** Heading CSS ***/
+h1,
+.h1 {
+    line-height: 32px;
+}
+
+h2,
+.h2 {
+    line-height: 32px;
+
+}
+
+h3,
+.h3 {
+    line-height: 32px;
+}
+
+h4,
+.h4 {
+    line-height: 32px;
+}
+
+h5,
+.h5 {
+    line-height: 32px;
+}
+
+h6,
+.h6 {
+    line-height: 32px;
+}
+
+/* Common Class CSS related to text alignment*/
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-introduction {
+    margin-top: 24px;
+}
+
+.grey {
+    color: var(--text-secondary-color) !important;
+}
+
+/* -=- Header CSS -=- */
+header {}
+
+/* -=- Footer CSS -=- */
+footer {}
+
+/* -=- Main Area CSS -=- */
+main {}
+
+/* -=- Keyframe CSS -=- */
+
+.bottom-spacer {
+    margin-bottom: 112px;
+}
+
+.divider {
+    background-color: var(--text-secondary-color);
+    height: .5px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-section {
+    height: 50vh;
+    display: grid;
+    place-content: end left;
+    padding-bottom:32px;
+}
+
+.hero-name {
+    margin: 0px;
+    /* font-weight: 300; */
+    padding-top: 8px;
+    font-weight: 400;
+}
+
+.hero-subtitle {
+    margin: 0px;
+    color: var(--text-secondary-color);
+    font-weight: 300;
+    padding-top: 8px;
+}
+
+.maruxa {
+    margin: 2vh 8vw 2vh 8vw;
+}
+
+.header-element {
+    display: block;
+}
+
+
+
+.header-element-title {
+    font-weight: 300;
+    font-size: 32px;
+    margin-bottom: 8px;
+    line-height: 1.1;
+}
+.header-element-subtitle {
+    font-weight: 300;
+    font-size: 32px;
+    color: var(--text-secondary-color);
+    line-height: 1.1;
+
+}
+
+.habilitites {
+    margin: 60px 8vw 2vh 8vw;
+}
+
+.projects {
+    margin: 60px 8vw 2vh 8vw;
+}
+
+.about-me {
+    margin: 60px 8vw 2vh 8vw;
+}
+
+.contact {
+    margin: 60px 10vw 8vh 8vw;
+}
+
+.image_container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  
+}
+
+.image_container img {
+    width: 300px;
+    height: auto;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    margin-bottom: 16px;
+}
+
+.jobs {
+    margin-top: 32px;
+}
+
+.job-cell {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--text-secondary-color);
+}
+
+.socials {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 32px;
+}
+
+.socials p:hover {
+    color: var(--text-secondary-color);
+}
+
+.container-last-p p:last-child {
+    padding-bottom: 0px;
+} 
+
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion */
+@media (prefers-reduced-motion) {
+    
+}
+
+/****** Responsive CSS Start ******/
+
+@media only screen and (min-width: 1200px) {
+    .job-cell {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 16px;
+    }
+
+
+    .title-wrapper {
+        width: 75%;
+    }
+
+    .two-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 24px;
+    }
+    main {
+        margin: 0px 14vw;
+    }
+
+}
+
+
+/****** Responsive CSS End ******/
