@@ -308,6 +308,7 @@ main {}
     color: var(--text-secondary-color);
     font-weight: 300;
     padding-top: 8px;
+
 }
 .hero {
     background-color: black;
@@ -344,6 +345,8 @@ main {}
     margin-bottom: 8px;
     line-height: 1.1;
     z-index: 2;
+    font-family: 'Times', sans-serif;
+
 }
 
 .header-element-subtitle-hero {
@@ -352,6 +355,8 @@ main {}
     color: var(--text-secondary-color);
     line-height: 1.1;
     z-index: 2;
+    font-family: 'Times', sans-serif;
+
 }
 
 
@@ -483,7 +488,10 @@ main {}
 
 
     .title-wrapper {
-        width: 75%;
+        width: 100%;
+    }
+    .title-wrapper-hero {
+        width: 70%;
     }
 
     .two-columns {
