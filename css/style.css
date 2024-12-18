@@ -66,13 +66,13 @@ body {
     mix-blend-mode: difference; /* Ajusta esto para lograr el efecto deseado */
 }
 
-img {
+/* img {
     border: 0px !important;
     outline: none;
     width: 100%;
     max-width: 100%;
     display: block;
-}
+} */
 
 ul,
 ol {
@@ -289,10 +289,11 @@ main {}
 }
 
 .hero-section {
-    height: 30vh;
-    display: grid;
-    place-content: end left;
-    padding-bottom:32px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
 }
 
 .hero-name {
@@ -308,6 +309,20 @@ main {}
     font-weight: 300;
     padding-top: 8px;
 }
+.hero {
+    background-color: black;
+    padding: 6vh 13vw 6vh 14vw;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    height: 416px;
+    display: flex;
+    align-items: center;
+}
+
+.title-wrapper {
+    z-index: 2;
+}
 
 .maruxa {
     margin: 2vh 8vw 2vh 8vw;
@@ -317,24 +332,82 @@ main {}
     display: block;
 }
 
+.header-section {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
 
-
-.header-element-title {
+.header-element-title-hero {
     font-weight: 300;
     font-size: 32px;
     margin-bottom: 8px;
     line-height: 1.1;
+    z-index: 2;
+}
+
+.header-element-subtitle-hero {
+    font-weight: 500;
+    font-size: 64px;
+    color: var(--text-secondary-color);
+    line-height: 1.1;
+    z-index: 2;
+}
+
+
+.header-element-title {
+    font-weight: 500;
+    font-size: 32px;
+    margin-bottom: 8px;
+    line-height: 1.1;
+    z-index: 2;
 }
 .header-element-subtitle {
     font-weight: 300;
     font-size: 32px;
     color: var(--text-secondary-color);
     line-height: 1.1;
-
+    z-index: 2;
 }
 
 .habilitites {
     margin: 60px 8vw 2vh 8vw;
+    padding-top: 80px;
+}
+
+.success-cases {
+    margin: 60px 8vw 2vh 8vw;
+    padding-bottom: 64px;
+}
+
+
+.success-cases-element {
+    display: flex;
+    flex-direction: column;
+}
+
+.success-cases-element-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.success-cases-element-header-company {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.1;
+    padding-bottom: 4px;
+}
+
+
+
+.success-cases-element-header-title {
+    font-weight: 300;
+    font-size: 32px;
+    /* margin-bottom: 8px; */
+    line-height: 1.1;
+    color: var(--text-secondary-color);
+    font-family: 'Times', sans-serif;
+
 }
 
 .projects {
@@ -354,14 +427,18 @@ main {}
     display: flex;
     justify-content: flex-start;
     align-items: center;
-  
 }
 
 .image_container img {
-    width: 300px;
+    width: 624px;
     height: auto;
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
     margin-bottom: 16px;
+    transform: scaleX(-1);
+    filter: grayscale(100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
 }
 
 .jobs {
@@ -377,7 +454,7 @@ main {}
 
 .socials {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: min-content;
     margin-top: 32px;
 }
 
@@ -388,6 +465,7 @@ main {}
 .container-last-p p:last-child {
     padding-bottom: 0px;
 } 
+
 
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion */
@@ -413,11 +491,38 @@ main {}
         grid-template-columns: 1fr 1fr;
         grid-gap: 24px;
     }
-    main {
+    .habilitites, .success-cases, .projects, .about-me, .contact {
         margin: 0px 14vw;
     }
 
+   
+}
+    /* .hero {
+        padding: 0px 21vw;
+    } */
+
+
+@media only screen and (max-width: 1199px) {
+    .image_container img {
+        display: none;
+    }
+    .habilitites {
+    padding-top: 16px;
+    }
+    .hero {
+        padding: 32px;
+          /* height: 480px; */
+    }
+    .last {
+        margin-top: 42px;
+    }
 }
 
+/* Media query for screens less than 740px wide */
+@media (max-width: 740px) {
+    .header-element-subtitle-hero {
+        font-size: 40px; /* Set font size to 32px */
+    }
+}
 
 /****** Responsive CSS End ******/
