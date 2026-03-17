@@ -275,7 +275,13 @@ h6,
 header {}
 
 /* -=- Footer CSS -=- */
-footer {}
+footer {
+    padding: 2rem 8vw 3rem;
+}
+
+footer .footer-cv-link {
+    margin-top: 0;
+}
 
 /* -=- Main Area CSS -=- */
 main {}
@@ -505,7 +511,22 @@ main {}
     transition: color 180ms ease, gap 180ms ease;
 }
 
-.special-projects-cta::after {
+.download-cv-link {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    gap: 8px;
+    width: fit-content;
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: rgba(27, 27, 27, 0.82);
+    letter-spacing: 0.01em;
+    font-family: 'Figtree', sans-serif;
+    text-decoration: none;
+    transition: color 180ms ease, gap 180ms ease;
+}
+.special-projects-cta::after, .download-cv-link::after {
     content: "→";
     font-size: 14px;
     line-height: 1;
@@ -513,7 +534,7 @@ main {}
     top: 1px;
 }
 
-.special-projects-cta::before {
+.special-projects-cta::before, .download-cv-link::before {
     content: "";
     position: absolute;
     left: 0;
@@ -527,13 +548,17 @@ main {}
 }
 
 .special-projects-cta:hover,
-.special-projects-cta:focus-visible {
+.special-projects-cta:focus-visible,
+.download-cv-link:hover,
+.download-cv-link:focus-visible {
     color: var(--accent-color);
     gap: 10px;
 }
 
 .special-projects-cta:hover::before,
-.special-projects-cta:focus-visible::before {
+.special-projects-cta:focus-visible::before,
+.download-cv-link:hover::before,
+.download-cv-link:focus-visible::before {
     transform: scaleX(1);
 }
 
