@@ -1505,9 +1505,21 @@ main {}
 }
 
 /* Media query for screens less than 740px wide */
+@media (max-width: 768px) {
+    .tres-col {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .tres-col .item {
+        border-top: 1px solid #e0e0e0;
+        padding-top: 1.5rem;
+    }
+}
+
 @media (max-width: 740px) {
     .header-element-subtitle-hero {
-        font-size: 40px; /* Set font size to 32px */
+        font-size: 40px;
     }
 
     .hero-positioning {
