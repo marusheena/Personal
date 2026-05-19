@@ -1506,6 +1506,11 @@ main {}
 
 /* Media query for screens less than 740px wide */
 @media (max-width: 768px) {
+    .dos-col {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
     .tres-col {
         grid-template-columns: 1fr;
         gap: 2rem;
