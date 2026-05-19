@@ -20,8 +20,8 @@
     --text-selection-color: #b3d4fc;
     --accent-color: #6a2e8a;
     --accent-soft-color: rgba(106, 46, 138, 0.18);
-    --section-spacing: 120px;
-    --section-spacing-mobile: 80px;
+    --section-spacing: 72px;
+    --section-spacing-mobile: 52px;
 }
 
 /* -=- Common Element CSS Start -=- */
@@ -409,11 +409,12 @@ main {}
 .header-element-subtitle {
     font-weight: 300;
     font-size: 32px;
-    color: var(--text-secondary-color);
+    color: #6a2e8a;
     line-height: 1.1;
     z-index: 2;
 }
 
+.about,
 .habilitites,
 .success-cases,
 .special-projects,
@@ -423,6 +424,22 @@ main {}
     margin-left: 8vw;
     margin-right: 8vw;
 }
+
+.about {
+    margin-top: 0;
+    padding-top: 72px;
+    padding-bottom: 0;
+}
+
+.frase { font-size: clamp(1.8rem, 4.5vw, 2.8rem); font-weight: 500; line-height: 1.2; font-family: 'Times', serif; margin: 0 0 0.25rem; }
+.frase span { color: #6a2e8a; }
+.linea { width: 48px; height: 2px; background: #6a2e8a; margin: 1.5rem 0 2rem; border-radius: 2px; }
+.dos-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+.sep { border: none; border-top: 0.5px solid #e0e0e0; margin: 3.5rem 0 2.5rem; }
+.tres-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.item strong { display: block; font-size: 12px; font-weight: 600; color: #6a2e8a; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 6px; }
+.cta-link { display: inline-block; margin-top: 2rem; color: #6a2e8a; font-size: 15px; font-weight: 500; text-decoration: none; }
+.cta-link:hover { color: #2c2c2a; }
 
 .habilitites {
     margin-top: 0;
@@ -686,7 +703,7 @@ main {}
     grid-template-columns: 1fr;
     gap: 24px;
     align-items: stretch;
-    margin-top: 40px;
+    margin-top: 0;
 }
 
 .success-cases-element {
@@ -1286,7 +1303,7 @@ main {}
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 18px;
-    margin-top: 18px;
+    margin-top: 0;
 }
 
 .socials a {
@@ -1388,7 +1405,7 @@ main {}
         grid-template-columns: 1fr 1fr;
         column-gap: 48px;
     }
-    .habilitites, .success-cases, .special-projects, .projects, .about-me, .contact {
+    .about, .habilitites, .success-cases, .special-projects, .projects, .about-me, .contact {
         margin-left: 14vw;
         margin-right: 14vw;
     }
@@ -1442,11 +1459,11 @@ main {}
 
     .success-cases-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        margin-top: 36px;
+        margin-top: 0;
     }
 
     .special-projects-feature {
-        margin-top: 36px;
+        margin-top: 0;
         padding: 28px;
     }
 
@@ -1502,11 +1519,11 @@ main {}
 
     .success-cases-grid {
         grid-template-columns: 1fr;
-        margin-top: 28px;
+        margin-top: 0;
     }
 
     .special-projects-feature {
-        margin-top: 28px;
+        margin-top: 0;
         padding: 24px;
         border-radius: 18px;
         gap: 24px;
