@@ -434,9 +434,9 @@ main {}
 .frase { font-size: clamp(1.8rem, 4.5vw, 2.8rem); font-weight: 500; line-height: 1.2; font-family: 'Times', serif; margin: 0 0 0.25rem; }
 .frase span { color: #6a2e8a; }
 .linea { width: 48px; height: 2px; background: #6a2e8a; margin: 1.5rem 0 2rem; border-radius: 2px; }
-.dos-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+.dos-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
 .sep { border: none; border-top: 0.5px solid #e0e0e0; margin: 3.5rem 0 2.5rem; }
-.tres-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.tres-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
 .item strong { display: block; font-size: 12px; font-weight: 600; color: #6a2e8a; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 6px; }
 .cta-link { display: inline-block; margin-top: 2rem; color: #6a2e8a; font-size: 15px; font-weight: 500; text-decoration: none; }
 .cta-link:hover { color: #2c2c2a; }
@@ -1519,6 +1519,11 @@ main {}
     .tres-col .item {
         border-top: 1px solid #e0e0e0;
         padding-top: 1.5rem;
+    }
+
+    .tres-col .item:first-child {
+        border-top: none;
+        padding-top: 0;
     }
 }
 
