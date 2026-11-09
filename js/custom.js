@@ -29,3 +29,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+const heroImage = document.querySelector(".hero .image_container img");
+
+if (heroImage) {
+  const reveal = () => heroImage.classList.add("is-loaded");
+  const revealDecoded = () => {
+    const decoded = heroImage.decode ? heroImage.decode() : Promise.resolve();
+    decoded.catch(() => {}).then(reveal);
+  };
+
+  if (heroImage.complete) {
+    if (heroImage.naturalWidth) {
+      revealDecoded();
+    } else {
+      reveal();
+    }
+  } else {
+    heroImage.addEventListener("load", revealDecoded, { once: true });
+    heroImage.addEventListener("error", reveal, { once: true });
+  }
+}

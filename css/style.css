@@ -1545,10 +1545,24 @@ main {}
     object-fit: cover;
     object-position: 72% center;
     transform: scaleX(-1);
-    filter: grayscale(100%) contrast(0.94) brightness(0.9);
     position: absolute;
     inset: 0;
     z-index: 0;
+}
+
+.js .hero .image_container img {
+    opacity: 0;
+    transition: opacity 800ms ease;
+}
+
+.js .hero .image_container img.is-loaded {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js .hero .image_container img {
+        transition: none;
+    }
 }
 
 .jobs {
