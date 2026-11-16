@@ -2256,12 +2256,18 @@ main {}
 }
 
 .hr-source {
-    margin: 48px 0 0;
+    margin: 0;
     padding: 0;
     font-size: 13px;
     line-height: 1.5;
     color: rgba(27, 27, 27, 0.55);
     text-wrap: pretty;
+}
+
+.hr-stats + .hr-source {
+    margin-top: 64px;
+    padding-top: 20px;
+    border-top: 1px solid var(--divider-color);
 }
 
 .hr-source a {
