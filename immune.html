@@ -38,28 +38,26 @@
    href="img/favicon-16x16.png"
   />
   <link rel="manifest" href="img/site.webmanifest" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css?v=cases1" />
  </head>
  <body>
   <header></header>
   <main class="case-page case-page-project">
-   <section class="case-study">
+   <section class="case-study hr">
     <a class="case-study-back" href="index.html">Volver al portfolio</a>
-    <div class="case-study-intro">
-     <div class="case-study-header">
-      <span class="case-study-company">IMMUNE Technology Institute</span>
-      <h1 class="case-study-title">AQI personalizado para Madrid</h1>
-     </div>
-     <div class="case-study-overview">
-      <p class="case-study-meta">
-       Data Science · innovación aplicada · modelado predictivo · machine learning
-      </p>
-     <p class="case-study-summary">
-       Proyecto ganador del Premio al Mejor Proyecto de Data Science, centrado
+    <div class="hr-hero hr-hero--solo">
+     <div class="hr-hero-copy">
+      <p class="hr-name">IMMUNE Technology Institute</p>
+      <h1 class="hr-headline">AQI personalizado para Madrid</h1>
+
+            <div class="hr-tags-wrap">
+       <p class="hr-tags"><span>Data Science</span><span>innovación aplicada</span><span>modelado predictivo</span><span>machine learning</span></p>
+      </div>
+     <p class="hr-hook"><a href="#caso">Leer el caso <span aria-hidden="true">↓</span></a></p>
+     <p class="hr-text hr-lead">Proyecto ganador del Premio al Mejor Proyecto de Data Science, centrado
        en construir un AQI más útil y contextualizado para Madrid integrando
        contaminación, meteorología, tráfico y eventos, más allá del enfoque
-       habitual de los índices públicos europeos.
-      </p>
+       habitual de los índices públicos europeos.</p>
       <div class="case-study-resource-links">
        <a
         class="case-study-resource-link"
@@ -70,32 +68,31 @@
         Ver proyecto en GitHub
        </a>
       </div>
-      <div class="case-study-highlights">
-       <div class="case-study-highlight">
-        <p class="case-study-highlight-label">Premio</p>
-        <p class="case-study-highlight-text">
+      <div class="hr-highlights">
+       <div class="hr-highlight">
+        <p class="hr-highlight-label">Premio</p>
+        <p class="hr-highlight-text">
          Mejor Proyecto de Data Science de la promoción.
         </p>
        </div>
-       <div class="case-study-highlight">
-       <p class="case-study-highlight-label">Innovación</p>
-        <p class="case-study-highlight-text">
+       <div class="hr-highlight">
+       <p class="hr-highlight-label">Innovación</p>
+        <p class="hr-highlight-text">
          Efecto frontera entre ZBE, eventos y AQI contextualizado.
         </p>
        </div>
-       <div class="case-study-highlight">
-        <p class="case-study-highlight-label">Resultado</p>
-        <p class="case-study-highlight-text">
+       <div class="hr-highlight">
+        <p class="hr-highlight-label">Resultado</p>
+        <p class="hr-highlight-text">
          XGBoost global con R² de 0.89 y hallazgo del efecto frontera entre ZBE.
         </p>
        </div>
       </div>
      </div>
     </div>
-    <div class="case-study-divider"></div>
-    <div class="case-study-content">
-     <section class="case-study-section">
-      <h2 class="case-study-section-title">El reto</h2>
+    <div class="hr-body" id="caso">
+     <section class="hr-section">
+      <h2 class="hr-h2">El reto</h2>
       <p>
        El AQI tradicional, tal como lo define la EPA, mide concentración de contaminantes: PM2.5, PM10, NO₂, O₃. Es útil, pero insuficiente. No captura qué pasa en la ciudad: ni los efectos del tráfico por zonas, ni los eventos que generan picos atípicos, ni cómo las restricciones de las Zonas de Bajas Emisiones desplazan el tráfico a los barrios adyacentes.
       </p>
@@ -103,8 +100,8 @@
        El reto era construir un índice más contextualizado para Madrid, integrando señales que los modelos estándar o ignoran o analizan por separado: tráfico por zonas, meteorología, eventos especiales y el efecto frontera entre ZBE.
       </p>
      </section>
-     <section class="case-study-section">
-      <h2 class="case-study-section-title">Proceso</h2>
+     <section class="hr-section">
+      <h2 class="hr-h2">Proceso</h2>
       <div class="process-flow">
        <div class="process-step">
         <span class="process-step-num">01</span>
@@ -132,9 +129,9 @@
        </div>
       </div>
      </section>
-     <section class="case-study-section">
-      <h2 class="case-study-section-title">Qué hicimos</h2>
-      <ul class="case-study-list">
+     <section class="hr-section">
+      <h2 class="hr-h2">Qué hicimos</h2>
+      <ul class="hr-list">
        <li>
         Construimos un pipeline end-to-end que integra datos de contaminación, tráfico por zonas, meteorología y eventos especiales de Madrid.
        </li>
@@ -175,8 +172,8 @@
        </a>
       </div>
      </section>
-     <section class="case-study-section">
-      <h2 class="case-study-section-title">Impacto</h2>
+     <section class="hr-section">
+      <h2 class="hr-h2">Impacto</h2>
       <p>
        Premio al Mejor Proyecto de Data Science de la promoción. El modelo XGBoost global alcanzó un R² de 0.89 y permitió detectar patrones que los índices estándar no capturan: el desplazamiento de tráfico entre ZBE y outliers asociados a eventos puntuales.
       </p>
@@ -184,36 +181,30 @@
        El proyecto demostró que redefinir qué variables importan, y no solo ajustar el modelo, es lo que genera una mejora en la capacidad de análisis.
       </p>
      </section>
-     <section class="case-study-section">
-      <h2 class="case-study-section-title">Aprendizaje</h2>
+     <section class="hr-section">
+      <h2 class="hr-h2">Aprendizaje</h2>
       <p>
        Esta forma de trabajar, incorporar señales que otros modelos ignoran y construir variables propias a partir de la comprensión del contexto, es lo mismo que aplico en producto: los datos estandarizados rara vez capturan lo que importa de verdad. Hay que saber qué buscar antes de ponerse a buscar.
       </p>
      </section>
     </div>
    </section>
-   <section class="contact case-study-contact">
-    <div class="header-section">
-     <div class="title-wrapper">
-      <span class="header-element-title">Contacto | </span>
-      <span class="header-element-subtitle"> "Let's work together" </span>
-     </div>
-     <div class="divider"></div>
-    </div>
+   <section class="contact case-study-contact hr hr-contact">
+    <h2 class="hr-h2">Contacto</h2>
     <div class="socials">
      <a
       href="https://www.linkedin.com/in/maruxamoreira/"
       target="_blank"
       rel="noopener noreferrer"
      >
-      <p class="socials-title">LinkedIn</p>
+      <p class="socials-title">LinkedIn<span class="hr-sr"> (se abre en una pestaña nueva)</span></p>
      </a>
      <a
       href="https://github.com/marusheena/Calidad-del-Aire-en-Madrid"
       target="_blank"
       rel="noopener noreferrer"
      >
-      <p class="socials-title">GitHub</p>
+      <p class="socials-title">GitHub<span class="hr-sr"> (se abre en una pestaña nueva)</span></p>
      </a>
      <a
       href="mailto:maruxamoreira@gmail.com"
@@ -225,7 +216,7 @@
      <a href="tel:692694191" target="_blank" rel="noopener noreferrer">
       <p class="socials-title">Teléfono</p>
      </a>
-     <a href="img/PM_CV_Maruxa Moreira.pdf" target="_blank" rel="noopener noreferrer" aria-label="Descargar CV en PDF">
+     <a href="img/PM_CV_Maruxa Moreira.pdf" target="_blank" rel="noopener noreferrer" aria-label="Descargar CV en PDF (se abre en una pestaña nueva)">
       <p class="socials-title">Descargar CV</p>
      </a>
     </div>
